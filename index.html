@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>App Showcase</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: white;
+      color: black;
+      transition: 0.3s;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 100px auto;
+      background: #e0e0e0;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .container img {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-video {
+      background: #007B7F;
+      color: white;
+    }
+
+    .btn-download {
+      background: #007B7F;
+      color: white;
+    }
+
+    .btn-night {
+      background: #aaa;
+      color: black;
+    }
+
+    .btn-video:hover,
+    .btn-download:hover,
+    .btn-night:hover {
+      opacity: 0.8;
+    }
+
+    .night {
+      background: #121212;
+      color: white;
+    }
+
+    .night .container {
+      background: #1e1e1e;
+    }
+
+    .night .btn-night {
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="Sign logo.png" alt="App Logo" />
+    <h2>Welcome to Our App</h2>
+    <a href="https://www.youtube.com/watch?v=8LubMvPooI8&feature=youtu.be" target="_blank">
+      <button class="btn-video">Watch Demo Video 📹</button>
+    </a>
+    <a href="https://drive.google.com/file/d/1tJd0QfbVJhJH1a3lNuIuPxnmynzznsDE/view" target="_blank">
+      <button class="btn-download">Download App ⬇️</button>
+    </a>
+    <button class="btn-night" onclick="toggleNight()">Toggle Night Mode 🌙</button>
+  </div>
+
+  <script>
+    function toggleNight() {
+      document.body.classList.toggle("night");
+    }
+  </script>
+</body>
+</html>
